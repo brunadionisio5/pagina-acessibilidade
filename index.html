@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</head>
+
+<body>
+
+        <div class="btns">
+            <button onclick="toggleContrast()" id="btn-contraste">Alto Contraste</button>
+            <button onclick="readPage()" id="btn-ler-pag">Ler Página</button>
+        </div>
+
+    <h2>- Informática para Internet</h2>
+    <h3>
+        O processo de criação de sites e o de desenvolvimento de programas que podem ser utilizados em páginas na
+        internet. Para programar, o aluno vai estudar raciocínio lógico e linguagens de programação, que utilizam
+        comandos para desenvolver funcionalidades e dar forma a um site. Além disso, o estudante aprenderá um pouco de
+        design com o objetivo de tornar a página mais agradável e fácil de ser utilizada.
+    </h3>
+
+    <img src="img/ipt.jpg" alt="Aluno fazendo tarefa">
+
+
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
+    
+
+    <script>
+        function readPage() {
+            const content = document.body.innerText;
+            const utterance = new SpeechSynthesisUtterance(content);
+            utterance.lang = 'pt-BR'; 
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+</center>
+</body>
+</html>
